@@ -1,172 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="css/skills.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <script src="script.js"></script>
-    <link rel="icon" href="img/logos/J.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>João Eduardo — Portfólio</title>
+  <meta name="description" content="João Eduardo — Técnico em Informática (IFSP), Engenharia da Computação (USP). Foco em IA e Robótica.">
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="João Eduardo — Portfólio">
+  <meta property="og:description" content="Técnico em Informática (IFSP), Engenharia da Computação (USP). Foco em IA e Robótica.">
+  <meta property="og:image" content="img/og-cover.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="João Eduardo — Portfólio">
+  <meta name="twitter:description" content="Técnico em Informática (IFSP), Engenharia da Computação (USP). Foco em IA e Robótica.">
+  <meta name="twitter:image" content="img/og-cover.png">
+  <meta name="theme-color" content="#0b1917">
+
+  <link rel="icon" href="img/logos/J.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Sora:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header>
-        <img src="img/logos/J.png" alt="Site Logo" class="logo-site">
-        <nav>
-            <button onclick="scrollToSection('home')">Home</button>
-            <button onclick="scrollToSection('profile')">Profile</button>
-            <button onclick="scrollToSection('projects')">Projects</button>
-            <button onclick="scrollToSection('contact')">Contact</button>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="home visible">
-            <div class="home-content">
-            <h1>Programmer</h1>
-            <div class="escrita">Network & Telecom Student</div>
-            <p>With a passion for coding, I bring ideas to life through programming.</p>
-            <p>Experienced in creating modern, user-friendly websites and applications.</p>
-            <ul>
-                <li><button>python</button></li>
-                <li><button>javascript</button></li>
-                <li><button>Node.js</button></li>
-                <li><button>C++</button></li>
-            </ul>
-            <ul>
-                <li><img src="" alt="GitHub"></li>
-                <li><img src="" alt="LinkedIn"></li>
-                <li><img src="img/Instagram.png" alt="Instagram" class="social-icon"></li>
-            </ul>
-            </div>
-            <img src="img/fundo.png" alt="" class="fundo">
-        </section>
-        <section id="profile" class="perfil">
-            <h1>ABOUT ME</h1>
-            <div class="perfil-content">
-                <div class="esquerda-perfil">
-                    <img src="img/fundo.png" alt="Profile Picture" class="perfil-img">
-                    <h1>João Eduardo</h1>
-                    <p class="subheading">Web Developer</p>
-                    <div class="social-links" style="display: flex; justify-content: center;">
-                        <li><img src="img/Instagram.png" alt="Instagram" class="social-icon" style="width: 70px;"></li>
-                        <li><img src="img/Instagram.png" alt="Instagram" class="social-icon" style="width: 70px;"></li>
-                        <li><img src="img/Instagram.png" alt="Instagram" class="social-icon" style="width: 70px;"></li>
-                    </div>
-                </div>
-                <div class="direita-perfil">
-                    <div class="perfil-details">
-                        <h2>HELLO!</h2>
-                        <h3>Here's who I am & what I do</h3>
-                        <p>I am a passionate web developer with experience in creating dynamic and responsive websites.
-                            I enjoy working with modern web technologies and continuously learning new skills.</p>
-                        <p id="hobbies">Hobbies:</p>
-                        <ul>
-                            <li><i class="fas fa-code"></i> Coding</li>
-                            <li><i class="fas fa-book"></i> Reading</li>
-                            <li><i class="fas fa-plane"></i> Traveling</li>
-                            <li><i class="fas fa-camera"></i> Photography</li>
-                        </ul>
-                        <p>Let's connect and create something amazing together!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <img src="img/logos/J.png" alt="Logo João Eduardo" class="logo-site">
+        <span>joão//eduardo</span>
+        <span class="status-dot" title="Disponível"></span>
+      </div>
+      <nav id="main-nav">
+        <button data-section="home" onclick="scrollToSection('home')" data-pt="início" data-en="home">início</button>
+        <button data-section="about" onclick="scrollToSection('about')" data-pt="sobre" data-en="about">sobre</button>
+        <button data-section="skills" onclick="scrollToSection('skills')" data-pt="skills" data-en="skills">skills</button>
+        <button data-section="projects" onclick="scrollToSection('projects')" data-pt="projetos" data-en="projects">projetos</button>
+        <button data-section="contact" onclick="scrollToSection('contact')" data-pt="contato" data-en="contact">contato</button>
+      </nav>
+      <div class="pill-switch lang-switch">
+        <button class="pill-btn active" data-lang="pt" onclick="setLang('pt')">PT</button>
+        <button class="pill-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menu" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-        <section id="projects" class="projects">
-            <h2 id="info-title">Languages I Know</h2>
-            <div class="project-buttons">
-                <button id="projects-button" onclick="showProjects()">
-                    <img src="img/logos/projects.png" alt="Projects Icon" class="button-icon">
-                    Projects
-                </button>
-                <button id="skills-button" onclick="showSkills()">
-                    <img src="img/logos/Skills.png" alt="Skills Icon" class="button-icon">
-                    Skills
-                </button>
-            </div>
-            <div id="project-list" class="project-list hidden">
-                <div class="project-item">
-                    <img src="img/Jogador.png" alt="Project 1 Image">
-                    <h3>Project 1</h3>
-                    <p>Description of project 1.</p>
-                    <a href="project1.html" class="project-link">Details</a>
-                </div>
-                <div class="project-item">
-                    <img src="img/Jogos.png" alt="Project 2 Image">
-                    <h3>Project 2</h3>
-                    <p>Description of project 2.</p>
-                    <a href="project2.html" class="project-link">Details</a>
-                </div>
-            </div>
-            <div id="skills-list" class="skills-list">
-                <ul>
-                    <li><img src="img/logos/HTML.png" alt="HTML">
-                        <p>HTML - Advanced</p>
-                    </li>
-                    <li><img src="img/logos/CSS.png" alt="CSS">
-                        <p>CSS - Advanced</p>
-                    </li>
-                    <li><img src="img/logos/Canva.png" alt="Canva">
-                        <p>Canva - Intermediate</p>
-                    </li>
-                    <li><img src="img/logos/javascript.svg" alt="JavaScript">
-                        <p>JavaScript - Intermediate</p>
-                    </li>
-                    <li><img src="img/logos/Python.png" alt="Python">
-                        <p>Python - Intermediate</p>
-                    </li>
-                    <li><img src="img/logos/GameMaker.png" alt="Python">
-                        <p>GameMaker - Intermediate</p>
-                    </li>
-                    <li><img src="img/logos/bootstrap.png" alt="Bootstrap" style="margin-top: 16px;">
-                        <p>Bootstrap - Intermediate</p>
-                    </li>
-                    <li><img src="img/logos/Node.png" alt="Node.js">
-                        <p>Node.js - Beginner</p>
-                    </li>
-                    <li><img src="img/logos/C++.png" alt="C++">
-                        <p>C++ - Beginner</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section id="contact" class="contact">
-            <div class="contact-esquerda">
-                <h1>CONTACT ME</h1>
-                <p>Feel free to reach out to me for any inquiries or collaborations.</p>
-                <p><strong>Email:</strong> joaoeduardoFreitas9@gmail.com</p>
-            </div>
-            <div class="contact-direita">
-                <form action="#" method="post">
-                    <div class="form__group">
-                        <input type="text" id="name" name="name" class="form__field" placeholder="Your Name" required>
-                        <label for="name" class="form__label">Name:</label>
-                    </div>
-                    <div class="form__group">
-                        <input type="email" id="email" name="email" class="form__field" placeholder="Your Email" required>
-                        <label for="email" class="form__label">Email:</label>
-                    </div>
-                    <div class="form__group">
-                        <textarea id="message" name="message" class="form__field" placeholder="Your Message" required></textarea>
-                        <label for="message" class="form__label">Message:</label>
-                    </div>
-                    <div class="form-buttons">
-                        <button type="submit">SEND</button>
-                        <button type="reset">CANCEL</button>
-                    </div>
-                </form>
-            </div>
-            <img src="img/logos/J.png" alt="Contact Logo" class="contact-logo" style="position: absolute; bottom: 0; left: 0;">
-        </section>
-    </main>
-    <footer>
+  <main>
 
-    </footer>
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg viewBox="0 0 1550 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="wave-line" d="M -50 60 C 150 -20, 300 140, 500 60 S 850 -20, 1050 60 S 1400 140, 1550 60" />
+          <circle class="wave-pulse" r="5" />
+        </svg>
+      </div>
+      <div class="hero-inner">
+        <p class="eyebrow" data-pt="&gt; técnico em informática (ifsp) / eng. da computação (usp)" data-en="&gt; it technician (ifsp) / computer engineering (usp)">&gt; técnico em informática (ifsp) / eng. da computação (usp)</p>
+        <h1 class="hero-name">João<br>Edu<span>ardo</span></h1>
+        <p class="hero-role"><span id="typed-role">Programador</span><span class="cursor">_</span></p>
+        <p class="hero-desc" data-pt="Gosto de transformar ideias em código. Curso Engenharia da Computação na USP e sou técnico em Informática formado pelo IFSP — hoje meu foco de estudos é IA e Robótica." data-en="I like turning ideas into code. I'm studying Computer Engineering at USP and I'm an IT Technician graduated from IFSP — my current study focus is AI and Robotics.">Gosto de transformar ideias em código. Curso Engenharia da Computação na USP e sou técnico em Informática formado pelo IFSP — hoje meu foco de estudos é IA e Robótica.</p>
+        <div class="hero-tags">
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">C</span>
+          <span class="tag">C++</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#skills" class="btn btn-primary" data-pt="Ver skills" data-en="See skills" onclick="scrollToSection('skills'); return false;">Ver skills</a>
+          <a href="assets/cv-joao-eduardo.pdf" class="btn btn-ghost" download data-pt="↓ Baixar CV" data-en="↓ Download CV">↓ Baixar CV</a>
+          <a href="#contact" class="btn btn-ghost" data-pt="Contato" data-en="Contact" onclick="scrollToSection('contact'); return false;">Contato</a>
+        </div>
+        <div class="hero-socials">
+          <a href="#" aria-label="GitHub" title="GitHub">gh</a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram" title="Instagram">ig</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 1180 60" preserveAspectRatio="none">
+        <path class="d-line" d="M0 30 H1180" />
+        <circle class="d-dot" r="4" />
+      </svg>
+    </div>
+
+    <section id="about" class="block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ sobre mim" data-en="/ about me">/ sobre mim</p>
+        <h2 data-pt="Quem sou eu" data-en="Who I am">Quem sou eu</h2>
+        <div class="about-grid">
+          <div class="about-photo-frame">
+            <img src="img/joão.png" alt="Foto de perfil de João Eduardo">
+          </div>
+          <div class="about-info">
+            <h3 class="about-name">João Eduardo</h3>
+            <p class="about-role" data-pt="Desenvolvedor & Estudante de Engenharia da Computação" data-en="Developer & Computer Engineering Student">Desenvolvedor &amp; Estudante de Engenharia da Computação</p>
+            <div class="about-bio">
+              <p data-pt="Sou técnico em Informática formado pelo IFSP e atualmente curso Engenharia da Computação na USP. Gosto de criar sites e aplicações, e tenho focado meus estudos em Inteligência Artificial e Robótica." data-en="I'm an IT Technician graduated from IFSP and I'm currently studying Computer Engineering at USP. I like building sites and applications, and I've been focusing my studies on Artificial Intelligence and Robotics.">Sou técnico em Informática formado pelo IFSP e atualmente curso Engenharia da Computação na USP. Gosto de criar sites e aplicações, e tenho focado meus estudos em Inteligência Artificial e Robótica.</p>
+              <p data-pt="Vamos nos conectar e criar algo incrível juntos!" data-en="Let's connect and build something great together!">Vamos nos conectar e criar algo incrível juntos!</p>
+            </div>
+            <div class="facts-grid">
+              <div class="fact">
+                <span class="fact-label" data-pt="Formação" data-en="Education">Formação</span>
+                <span class="fact-value">IFSP · USP</span>
+              </div>
+              <div class="fact">
+                <span class="fact-label" data-pt="Foco" data-en="Focus">Foco</span>
+                <span class="fact-value" data-pt="IA & Robótica" data-en="AI & Robotics">IA &amp; Robótica</span>
+              </div>
+              <div class="fact">
+                <span class="fact-label" data-pt="Status" data-en="Status">Status</span>
+                <span class="fact-value online" data-pt="Disponível" data-en="Available">Disponível</span>
+              </div>
+            </div>
+            <div class="hobbies">
+              <span class="hobby-chip" data-pt="💪 Academia" data-en="💪 Gym">💪 Academia</span>
+              <span class="hobby-chip" data-pt="🎮 Jogos" data-en="🎮 Games">🎮 Jogos</span>
+              <span class="hobby-chip" data-pt="💻 Coding" data-en="💻 Coding">💻 Coding</span>
+              <span class="hobby-chip" data-pt="🗣️ Socializar" data-en="🗣️ Socializing">🗣️ Socializar</span>
+            </div>
+            <div class="social-links">
+              <a href="#" aria-label="GitHub" title="GitHub">gh</a>
+              <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+              <a href="#" aria-label="Instagram" title="Instagram">ig</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 1180 60" preserveAspectRatio="none">
+        <path class="d-line" d="M0 30 H1180" />
+        <circle class="d-dot" r="4" />
+      </svg>
+    </div>
+
+    <section id="skills" class="block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ skills" data-en="/ skills">/ skills</p>
+        <h2 data-pt="Skills" data-en="Skills">Skills</h2>
+
+        <div class="skills-list">
+          <ul>
+            <li class="skill-card" data-level="3">
+              <img src="img/logos/HTML.png" alt="HTML">
+              <div class="skill-info">
+                <span class="skill-name">HTML</span>
+                <div class="signal-bars"><span></span><span></span><span></span></div>
+                <span class="skill-level-label" data-pt="Avançado" data-en="Advanced">Avançado</span>
+              </div>
+            </li>
+            <li class="skill-card" data-level="3">
+              <img src="img/logos/CSS.png" alt="CSS">
+              <div class="skill-info">
+                <span class="skill-name">CSS</span>
+                <div class="signal-bars"><span></span><span></span><span></span></div>
+                <span class="skill-level-label" data-pt="Avançado" data-en="Advanced">Avançado</span>
+              </div>
+            </li>
+            <li class="skill-card" data-level="2">
+              <img src="img/logos/Canva.png" alt="Canva">
+              <div class="skill-info">
+                <span class="skill-name">Canva</span>
+                <div class="signal-bars"><span></span><span></span><span></span></div>
+                <span class="skill-level-label" data-pt="Intermediário" data-en="Intermediate">Intermediário</span>
+              </div>
+            </li>
+            <li class="skill-card" data-level="2">
+              <img src="img/logos/javascript.svg" alt="JavaScript">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <div class="signal-bars"><span></span><span></span><span></span></div>
+                <span class="skill-level-label" data-pt="Intermediário" data-en="Intermediate">Intermediário</span>
+              </div>
+            </li>
+            <li class="skill-card" data-level="2">
+              <img src="img/logos/Python.png" alt="Python">
+              <div class="skill-info">
+                <span class="skill-name">Python</span>
+                <div class="signal-bars"><span></span><span></span><span></span></div>
+                <span class="skill-level-label" data-pt="Intermediário" data-en="Intermediate">Intermediário</span>
+              </div>
+            </li>
+            <li class="skill-card" data-level="2">
+              <img src="img/logos/GameMaker.png" alt="GameMaker">
+              <div class="skill-info">
+                <span class="skill-name">GameMaker</span>
+                <div class="signal-bars"><span></span><span></span><span></span></div>
+                <span class="skill-level-label" data-pt="Intermediário" data-en="Intermediate">Intermediário</span>
+              </div>
+            </li>
+            <li class="skill-card" data-level="2">
+              <img src="img/logos/bootstrap.png" alt="Bootstrap">
+              <div class="skill-info">
+                <span class="skill-name">Bootstrap</span>
+                <div class="signal-bars"><span></span><span></span><span></span></div>
+                <span class="skill-level-label" data-pt="Intermediário" data-en="Intermediate">Intermediário</span>
+              </div>
+            </li>
+            <li class="skill-card" data-level="1">
+              <img src="img/logos/Node.png" alt="Node.js">
+              <div class="skill-info">
+                <span class="skill-name">Node.js</span>
+                <div class="signal-bars"><span></span><span></span><span></span></div>
+                <span class="skill-level-label" data-pt="Iniciante" data-en="Beginner">Iniciante</span>
+              </div>
+            </li>
+            <li class="skill-card" data-level="1">
+              <img src="img/logos/C++.png" alt="C++">
+              <div class="skill-info">
+                <span class="skill-name">C++</span>
+                <div class="signal-bars"><span></span><span></span><span></span></div>
+                <span class="skill-level-label" data-pt="Iniciante" data-en="Beginner">Iniciante</span>
+              </div>
+            </li>
+            <li class="skill-card" data-level="1">
+              <img src="img/logos/C.png" alt="C">
+              <div class="skill-info">
+                <span class="skill-name">C</span>
+                <div class="signal-bars"><span></span><span></span><span></span></div>
+                <span class="skill-level-label" data-pt="Iniciante" data-en="Beginner">Iniciante</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 1180 60" preserveAspectRatio="none">
+        <path class="d-line" d="M0 30 H1180" />
+        <circle class="d-dot" r="4" />
+      </svg>
+    </div>
+
+    <section id="projects" class="block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ projetos" data-en="/ projects">/ projetos</p>
+        <h2 data-pt="Projetos" data-en="Projects">Projetos</h2>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-thumb">
+              <img src="img/projects/projeto-1.png" alt="Screenshot do Projeto 1">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Nome do Projeto 1</h3>
+              <p class="project-desc" data-pt="Descrição curta explicando o problema que o projeto resolve e o que ele faz." data-en="Short description explaining the problem the project solves and what it does.">Descrição curta explicando o problema que o projeto resolve e o que ele faz.</p>
+              <div class="project-stack">
+                <span class="tag">Python</span>
+                <span class="tag">IA</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener" data-pt="Ver código →" data-en="View code →">Ver código →</a>
+                <a href="#" target="_blank" rel="noopener" data-pt="Demo →" data-en="Demo →">Demo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">
+              <img src="img/projects/projeto-2.png" alt="Screenshot do Projeto 2">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Nome do Projeto 2</h3>
+              <p class="project-desc" data-pt="Descrição curta explicando o problema que o projeto resolve e o que ele faz." data-en="Short description explaining the problem the project solves and what it does.">Descrição curta explicando o problema que o projeto resolve e o que ele faz.</p>
+              <div class="project-stack">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Node.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener" data-pt="Ver código →" data-en="View code →">Ver código →</a>
+                <a href="#" target="_blank" rel="noopener" data-pt="Demo →" data-en="Demo →">Demo →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">
+              <img src="img/projects/projeto-3.png" alt="Screenshot do Projeto 3">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Nome do Projeto 3</h3>
+              <p class="project-desc" data-pt="Descrição curta explicando o problema que o projeto resolve e o que ele faz." data-en="Short description explaining the problem the project solves and what it does.">Descrição curta explicando o problema que o projeto resolve e o que ele faz.</p>
+              <div class="project-stack">
+                <span class="tag">C++</span>
+                <span class="tag">Robótica</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener" data-pt="Ver código →" data-en="View code →">Ver código →</a>
+                <a href="#" target="_blank" rel="noopener" data-pt="Demo →" data-en="Demo →">Demo →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 1180 60" preserveAspectRatio="none">
+        <path class="d-line" d="M0 30 H1180" />
+        <circle class="d-dot" r="4" />
+      </svg>
+    </div>
+
+    <section id="contact" class="block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ contato" data-en="/ contact">/ contato</p>
+        <h2 data-pt="Vamos conversar" data-en="Let's talk">Vamos conversar</h2>
+        <div class="contact-panel">
+          <p data-pt="Estou aberto a novas oportunidades, colaborações e projetos. Fique à vontade para entrar em contato por e-mail ou pelas redes sociais." data-en="I'm open to new opportunities, collaborations and projects. Feel free to reach out by email or social media.">Estou aberto a novas oportunidades, colaborações e projetos. Fique à vontade para entrar em contato por e-mail ou pelas redes sociais.</p>
+          <a class="email-link" id="email-link" href="#" data-user="joaoeduardoFreitas9" data-domain="gmail.com">carregando…</a>
+          <div class="social-links">
+            <a href="#" aria-label="GitHub" title="GitHub">gh</a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram" title="Instagram">ig</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> João Eduardo — <span data-pt="feito com código e café." data-en="built with code and coffee.">feito com código e café.</span></p>
+      <a href="#home" class="back-to-top" data-pt="voltar ao topo ↑" data-en="back to top ↑" onclick="scrollToSection('home'); return false;">voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
-
 </html>
