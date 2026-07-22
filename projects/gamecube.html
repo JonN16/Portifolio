@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameCube — João Eduardo</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="../img/logos/J.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Sora:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="brand" style="text-decoration:none;">
+        <img src="../img/logos/J.png" alt="Logo João Eduardo" class="logo-site">
+        <span>joão//eduardo</span>
+      </a>
+      <a href="../index.html#projects" class="back-link" data-pt="&larr; voltar aos projetos" data-en="&larr; back to projects">&larr; voltar aos projetos</a>
+      <div class="pill-switch lang-switch">
+        <button class="pill-btn active" data-lang="pt">PT</button>
+        <button class="pill-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="project-hero block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ projeto" data-en="/ project">/ projeto</p>
+        <h1>GameCube</h1>
+        <p class="project-detail-desc" data-pt="Cubo interativo feito com Arduino, Bluetooth, sensor de movimento (MPU6050) e uma matriz de LEDs 16x16, com estrutura em MDF cortada a laser (modelada em Blender). Roda Snake, Tetris, Pong e Breakout, controlados por um app Android feito em React Native. Projeto em equipe com 4 integrantes: João Eduardo, Nicolas Palácio, Lorenzo Oliveira e Mateus Bedim." data-en="Interactive cube built with Arduino, Bluetooth, a motion sensor (MPU6050) and a 16x16 LED matrix, with a laser-cut MDF enclosure (modeled in Blender). Runs Snake, Tetris, Pong and Breakout, controlled by an Android app built with React Native. Team project with 4 members: João Eduardo, Nicolas Palácio, Lorenzo Oliveira and Mateus Bedim.">Cubo interativo feito com Arduino, Bluetooth, sensor de movimento (MPU6050) e uma matriz de LEDs 16x16, com estrutura em MDF cortada a laser (modelada em Blender). Roda Snake, Tetris, Pong e Breakout, controlados por um app Android feito em React Native. Projeto em equipe com 4 integrantes: João Eduardo, Nicolas Palácio, Lorenzo Oliveira e Mateus Bedim.</p>
+        <div class="project-stack">
+          <span class="tag">C++</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">React Native</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Modelagem 3D</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MINHA CONTRIBUIÇÃO ============ -->
+    <section class="project-role block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ minha contribuição" data-en="/ my contribution">/ minha contribuição</p>
+        <p class="role-text" data-pt="Desenvolvi o jogo Tetris (lógica e renderização na matriz de LEDs) e o aplicativo mobile de controle em React Native." data-en="I built the Tetris game (logic and LED-matrix rendering) and the mobile control app in React Native.">Desenvolvi o jogo Tetris (lógica e renderização na matriz de LEDs) e o aplicativo mobile de controle em React Native.</p>
+      </div>
+    </section>
+
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section class="project-features block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ como funciona" data-en="/ how it works">/ como funciona</p>
+        <ul class="feature-list">
+          <li data-pt="Estrutura em MDF cortada a laser, modelada em Blender" data-en="Laser-cut MDF enclosure, modeled in Blender">Estrutura em MDF cortada a laser, modelada em Blender</li>
+          <li data-pt="Arduino controla a matriz de LEDs 16x16 e recebe comandos via Bluetooth" data-en="Arduino drives the 16x16 LED matrix and receives commands over Bluetooth">Arduino controla a matriz de LEDs 16x16 e recebe comandos via Bluetooth</li>
+          <li data-pt="Sensor de movimento (MPU6050) permite controles por movimento" data-en="Motion sensor (MPU6050) enables motion-based controls">Sensor de movimento (MPU6050) permite controles por movimento</li>
+          <li data-pt="App Android em React Native com um controle dedicado para cada jogo" data-en="Android app in React Native with a dedicated control screen for each game">App Android em React Native com um controle dedicado para cada jogo</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ JOGOS ============ -->
+    <!-- Edite/adicione cards aqui: cada jogo é um .game-card com foto (.game-card-thumb),
+         título (.game-card-title, pode ter uma .game-card-badge) e descrição (.game-card-desc) -->
+    <section class="project-features block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ jogos" data-en="/ games">/ jogos</p>
+        <div class="games-grid">
+
+          <article class="game-card">
+            <div class="game-card-thumb">
+              <img src="../img/projects/gamecube/snake.png" alt="Snake rodando na matriz de LEDs do GameCube">
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-card-title">Snake</h3>
+              <p class="game-card-desc" data-pt="Clássico jogo da cobrinha. Arraste o dedo na tela do app para controlar a direção; a cobra cresce a cada fruta capturada." data-en="Classic snake game. Drag your finger on the app screen to steer; the snake grows with each fruit captured.">Clássico jogo da cobrinha. Arraste o dedo na tela do app para controlar a direção; a cobra cresce a cada fruta capturada.</p>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="game-card-thumb">
+              <img src="../img/projects/gamecube/tetris.png" alt="Tetris rodando na matriz de LEDs do GameCube">
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-card-title">Tetris <span class="game-card-badge" data-pt="meu" data-en="mine">meu</span></h3>
+              <p class="game-card-desc" data-pt="Peças caem e podem ser giradas e movidas pelos botões do app; linhas completas são eliminadas. Jogo que eu desenvolvi (lógica + renderização)." data-en="Pieces fall and can be rotated and moved via app buttons; completed lines are cleared. This is the game I built (logic + rendering).">Peças caem e podem ser giradas e movidas pelos botões do app; linhas completas são eliminadas. Jogo que eu desenvolvi (lógica + renderização).</p>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="game-card-thumb">
+              <img src="../img/projects/gamecube/pong.png" alt="Pong rodando na matriz de LEDs do GameCube">
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-card-title">Pong</h3>
+              <p class="game-card-desc" data-pt="Recriação do clássico Pong, com o paddle controlado pelos botões do aplicativo." data-en="Recreation of the classic Pong, with the paddle controlled by the app's buttons.">Recriação do clássico Pong, com o paddle controlado pelos botões do aplicativo.</p>
+            </div>
+          </article>
+
+          <article class="game-card">
+            <div class="game-card-thumb">
+              <img src="../img/projects/gamecube/breakout.png" alt="Breakout rodando na matriz de LEDs do GameCube">
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-card-title">Breakout</h3>
+              <p class="game-card-desc" data-pt="Quebre os blocos exibidos na matriz de LEDs controlando o paddle pelo aplicativo." data-en="Break the blocks shown on the LED matrix by controlling the paddle from the app.">Quebre os blocos exibidos na matriz de LEDs controlando o paddle pelo aplicativo.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APLICATIVO ============ -->
+    <section class="project-app block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ aplicativo" data-en="/ app">/ aplicativo</p>
+        <div class="app-grid">
+          <div class="app-info">
+            <p class="project-detail-desc" data-pt="Conexão com um aplicativo Android desenvolvido em React Native, integrando funcionalidades nativas (Bluetooth) e garantindo uma experiência fluida e responsiva. Cada jogo tem sua própria tela de controle dentro do app." data-en="Connects to an Android app built with React Native, integrating native functionality (Bluetooth) and ensuring a smooth, responsive experience. Each game has its own control screen inside the app.">Conexão com um aplicativo Android desenvolvido em React Native, integrando funcionalidades nativas (Bluetooth) e garantindo uma experiência fluida e responsiva. Cada jogo tem sua própria tela de controle dentro do app.</p>
+            <div class="project-stack">
+              <span class="tag">React Native</span>
+              <span class="tag">Android</span>
+              <span class="tag">Bluetooth</span>
+            </div>
+          </div>
+          <div class="app-screens">
+            <div class="app-screen-card">
+              <img src="img/projects/gamecube/app-snake.png" alt="Tela de controle do Snake no aplicativo">
+              <p class="app-screen-label">Snake</p>
+            </div>
+            <div class="app-screen-card">
+              <img src="img/projects/gamecube/app-tetris.png" alt="Tela de controle do Tetris no aplicativo">
+              <p class="app-screen-label">Tetris</p>
+            </div>
+            <div class="app-screen-card">
+              <img src="img/projects/gamecube/app-pong.png" alt="Tela de controle do Pong no aplicativo">
+              <p class="app-screen-label">Pong</p>
+            </div>
+            <div class="app-screen-card">
+              <img src="img/projects/gamecube/app-breakout.png" alt="Tela de controle do Breakout no aplicativo">
+              <p class="app-screen-label">Breakout</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOTOS ============ -->
+    <section class="project-gallery block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ fotos" data-en="/ photos">/ fotos</p>
+        <div class="gallery-main">
+          <img id="gallery-main-img" src="../img/projects/gamecube/cover.png" alt="Foto do cubo GameCube">
+        </div>
+        <div class="gallery-thumbs">
+          <img class="gallery-thumb active" src="../img/projects/gamecube/cubo.png" alt="Foto do cubo GameCube">
+          <img class="gallery-thumb" src="../img/projects/gamecube/componente_arduino.jpeg" alt="Componentes: Arduino, sensor de movimento, Bluetooth e matriz de LEDs">
+          <img class="gallery-thumb" src="../img/projects/gamecube/modelagem3D.png" alt="Modelagem 3D da estrutura no Blender">
+          <img class="gallery-thumb" src="../img/projects/gamecube/laser.png" alt="Corte a laser da estrutura em MDF">
+          <img class="gallery-thumb" src="../img/projects/gamecube/app.png" alt="Aplicativo mobile de controle">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESULTADOS ============ -->
+    <section class="project-results block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ resultados" data-en="/ results">/ resultados</p>
+        <ul class="feature-list">
+          <li data-pt="Os quatro jogos (Snake, Pong, Tetris e Breakout) rodaram corretamente no cubo" data-en="All four games (Snake, Pong, Tetris and Breakout) ran correctly on the cube">Os quatro jogos (Snake, Pong, Tetris e Breakout) rodaram corretamente no cubo</li>
+          <li data-pt="A conexão Bluetooth com o aplicativo Android se manteve estável e responsiva" data-en="The Bluetooth connection with the Android app stayed stable and responsive">A conexão Bluetooth com o aplicativo Android se manteve estável e responsiva</li>
+          <li data-pt="A matriz 16x16 exibiu boas animações e visual atrativo" data-en="The 16x16 matrix displayed smooth animations and an attractive visual">A matriz 16x16 exibiu boas animações e visual atrativo</li>
+          <li data-pt="O projeto despertou interesse em programação e eletrônica em quem testou" data-en="The project sparked interest in programming and electronics among testers">O projeto despertou interesse em programação e eletrônica em quem testou</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> João Eduardo — <span data-pt="feito com código e café." data-en="built with code and coffee.">feito com código e café.</span></p>
+      <a href="../index.html#projects" data-pt="voltar aos projetos ↑" data-en="back to projects ↑">voltar aos projetos ↑</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    // Galeria: clique numa miniatura pra trocar a foto principal
+    document.querySelectorAll(".gallery-thumb").forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        document.getElementById("gallery-main-img").src = thumb.src;
+        document.querySelectorAll(".gallery-thumb").forEach((t) => t.classList.remove("active"));
+        thumb.classList.add("active");
+      });
+    });
+
+    // PT/EN: troca o texto de todo elemento com data-pt/data-en
+    document.querySelectorAll(".lang-switch .pill-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.lang;
+        document.querySelectorAll("[data-pt][data-en]").forEach((el) => {
+          el.textContent = el.dataset[lang];
+        });
+        document.querySelectorAll(".lang-switch .pill-btn").forEach((b) => {
+          b.classList.toggle("active", b === btn);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

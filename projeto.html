@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto — João Eduardo</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="img/logos/J.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Sora:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand" style="text-decoration:none;">
+        <img src="img/logos/J.png" alt="Logo João Eduardo" class="logo-site">
+        <span>joão//eduardo</span>
+      </a>
+      <a href="index.html#projects" class="back-link" data-pt="&larr; voltar aos projetos" data-en="&larr; back to projects">&larr; voltar aos projetos</a>
+      <div class="pill-switch lang-switch">
+        <button class="pill-btn active" data-lang="pt">PT</button>
+        <button class="pill-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="project-hero block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ projeto" data-en="/ project">/ projeto</p>
+        <h1 id="proj-title">Carregando…</h1>
+        <p class="project-detail-desc" id="proj-desc"></p>
+        <div class="project-stack" id="proj-stack"></div>
+      </div>
+    </section>
+
+    <section class="project-role block" id="role-section">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ minha contribuição" data-en="/ my contribution">/ minha contribuição</p>
+        <p class="role-text" id="proj-role"></p>
+      </div>
+    </section>
+
+    <section class="project-features block" id="features-section">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ como funciona" data-en="/ how it works">/ como funciona</p>
+        <ul class="feature-list" id="proj-features"></ul>
+      </div>
+    </section>
+
+    <section class="project-gallery block">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ fotos" data-en="/ photos">/ fotos</p>
+        <div class="gallery-main">
+          <img id="gallery-main-img" src="" alt="">
+        </div>
+        <div class="gallery-thumbs" id="gallery-thumbs"></div>
+      </div>
+    </section>
+
+    <section class="project-results block" id="results-section">
+      <div class="wrap">
+        <p class="eyebrow" data-pt="/ resultados" data-en="/ results">/ resultados</p>
+        <ul class="feature-list" id="proj-results"></ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> João Eduardo — <span data-pt="feito com código e café." data-en="built with code and coffee.">feito com código e café.</span></p>
+      <a href="index.html#projects" data-pt="voltar aos projetos ↑" data-en="back to projects ↑">voltar aos projetos ↑</a>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/projeto.js"></script>
+</body>
+</html>
