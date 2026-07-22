@@ -126,28 +126,42 @@
         <div class="app-grid">
           <div class="app-info">
             <p class="project-detail-desc" data-pt="Conexão com um aplicativo Android desenvolvido em React Native, integrando funcionalidades nativas (Bluetooth) e garantindo uma experiência fluida e responsiva. Cada jogo tem sua própria tela de controle dentro do app." data-en="Connects to an Android app built with React Native, integrating native functionality (Bluetooth) and ensuring a smooth, responsive experience. Each game has its own control screen inside the app.">Conexão com um aplicativo Android desenvolvido em React Native, integrando funcionalidades nativas (Bluetooth) e garantindo uma experiência fluida e responsiva. Cada jogo tem sua própria tela de controle dentro do app.</p>
+            <p class="project-detail-desc" data-pt="O app se conecta ao Arduino via Bluetooth e reconhece automaticamente qual jogo está rodando no cubo, trocando a interface de controle sem precisar reiniciar a conexão. Cada tela foi desenhada pensando nos comandos específicos daquele jogo: arrastar o dedo no Snake, botões de rotação e movimento no Tetris, e paddles dedicados no Pong e no Breakout." data-en="The app connects to the Arduino over Bluetooth and automatically detects which game is running on the cube, switching the control interface without needing to reconnect. Each screen was designed around that game's specific commands: drag-to-steer for Snake, rotate/move buttons for Tetris, and dedicated paddles for Pong and Breakout.">O app se conecta ao Arduino via Bluetooth e reconhece automaticamente qual jogo está rodando no cubo, trocando a interface de controle sem precisar reiniciar a conexão. Cada tela foi desenhada pensando nos comandos específicos daquele jogo: arrastar o dedo no Snake, botões de rotação e movimento no Tetris, e paddles dedicados no Pong e no Breakout.</p>
             <div class="project-stack">
               <span class="tag">React Native</span>
               <span class="tag">Android</span>
               <span class="tag">Bluetooth</span>
             </div>
+            <div class="project-links" style="margin-top:16px;">
+              <a href="https://github.com/SEU-USUARIO/SEU-REPOSITORIO" target="_blank" rel="noopener" data-pt="ver repositório no GitHub ↗" data-en="view repo on GitHub ↗">ver repositório no GitHub ↗</a>
+            </div>
           </div>
           <div class="app-screens">
-            <div class="app-screen-card">
-              <img src="img/projects/gamecube/app-snake.png" alt="Tela de controle do Snake no aplicativo">
+            <div class="app-screen-card portrait">
+              <div class="app-screen-img-wrap">
+                <img src="../img/projects/gamecube/snake-controle.jpg" alt="Tela de controle do Snake no aplicativo">
+              </div>
               <p class="app-screen-label">Snake</p>
             </div>
-            <div class="app-screen-card">
-              <img src="img/projects/gamecube/app-tetris.png" alt="Tela de controle do Tetris no aplicativo">
-              <p class="app-screen-label">Tetris</p>
-            </div>
-            <div class="app-screen-card">
-              <img src="img/projects/gamecube/app-pong.png" alt="Tela de controle do Pong no aplicativo">
-              <p class="app-screen-label">Pong</p>
-            </div>
-            <div class="app-screen-card">
-              <img src="img/projects/gamecube/app-breakout.png" alt="Tela de controle do Breakout no aplicativo">
-              <p class="app-screen-label">Breakout</p>
+            <div class="app-screens-stack">
+              <div class="app-screen-card">
+                <div class="app-screen-img-wrap">
+                  <img src="../img/projects/gamecube/tetris-controle.jpg" alt="Tela de controle do Tetris no aplicativo">
+                </div>
+                <p class="app-screen-label">Tetris</p>
+              </div>
+              <div class="app-screen-card">
+                <div class="app-screen-img-wrap">
+                  <img src="../img/projects/gamecube/pong-controle.jpg" alt="Tela de controle do Pong no aplicativo">
+                </div>
+                <p class="app-screen-label">Pong</p>
+              </div>
+              <div class="app-screen-card">
+                <div class="app-screen-img-wrap">
+                  <img src="../img/projects/gamecube/breakout-controle.jpg" alt="Tela de controle do Breakout no aplicativo">
+                </div>
+                <p class="app-screen-label">Breakout</p>
+              </div>
             </div>
           </div>
         </div>
@@ -159,7 +173,7 @@
       <div class="wrap">
         <p class="eyebrow" data-pt="/ fotos" data-en="/ photos">/ fotos</p>
         <div class="gallery-main">
-          <img id="gallery-main-img" src="../img/projects/gamecube/cover.png" alt="Foto do cubo GameCube">
+          <img id="gallery-main-img" src="../img/projects/gamecube/cubo.png" alt="Foto do cubo GameCube">
         </div>
         <div class="gallery-thumbs">
           <img class="gallery-thumb active" src="../img/projects/gamecube/cubo.png" alt="Foto do cubo GameCube">
@@ -193,6 +207,7 @@
     </div>
   </footer>
 
+    <script src="js/script.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   <script>
     // Galeria: clique numa miniatura pra trocar a foto principal
@@ -203,6 +218,17 @@
         thumb.classList.add("active");
       });
     });
+
+    // Se a foto principal falhar ao carregar, cai pra primeira miniatura em vez de ficar em branco
+    (() => {
+      const mainImg = document.getElementById("gallery-main-img");
+      const firstThumb = document.querySelector(".gallery-thumb");
+      if (mainImg && firstThumb) {
+        mainImg.addEventListener("error", () => {
+          if (mainImg.src !== firstThumb.src) mainImg.src = firstThumb.src;
+        }, { once: true });
+      }
+    })();
 
     // PT/EN: troca o texto de todo elemento com data-pt/data-en
     document.querySelectorAll(".lang-switch .pill-btn").forEach((btn) => {

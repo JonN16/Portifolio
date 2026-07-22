@@ -827,13 +827,16 @@ section.project-results {
   border: 1px solid var(--wire);
   background: var(--ink-2);
   aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 16px;
 }
 
 .gallery-main img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .gallery-thumbs {
@@ -960,7 +963,7 @@ section.project-results {
 .app-grid {
   display: grid;
   grid-template-columns: minmax(260px, 380px) 1fr;
-  gap: 46px;
+  gap: 200px;
   align-items: start;
 }
 
@@ -969,12 +972,24 @@ section.project-results {
 }
 
 .app-screens {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.app-screens-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .app-screen-card {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  width: 280px;
+  height: 158px;
   background: var(--ink-2);
   border: 1px solid var(--wire);
   border-radius: var(--radius);
@@ -982,23 +997,40 @@ section.project-results {
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
+.app-screen-card.portrait {
+  width: 235px;
+  height: 502px;
+}
+
 .app-screen-card:hover {
   border-color: var(--signal);
   transform: translateY(-4px);
 }
 
+.app-screen-img-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  background: var(--ink-3);
+  overflow: hidden;
+}
+
 .app-screen-card img {
   width: 100%;
-  aspect-ratio: 9/17;
+  height: 100%;
   object-fit: cover;
 }
 
 .app-screen-label {
+  flex: none;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--muted);
   text-align: center;
-  padding: 8px 6px;
+  padding: 0 6px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
