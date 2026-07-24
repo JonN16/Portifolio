@@ -1038,6 +1038,7 @@ section.project-results {
 @media (max-width: 900px) {
   .app-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 
@@ -1137,5 +1138,26 @@ footer {
   .footer-inner {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-wrap: wrap;
+    row-gap: 6px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .back-link {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  section.project-hero {
+    padding-top: 170px;
   }
 }
